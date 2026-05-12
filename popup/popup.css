@@ -1,0 +1,282 @@
+:root {
+  color-scheme: light;
+  --bg: #f7f7f4;
+  --panel: #ffffff;
+  --ink: #1d2228;
+  --muted: #5d6874;
+  --line: #d9ded7;
+  --accent: #0f6b5f;
+  --accent-strong: #0a5047;
+  --fail: #b3261e;
+  --pass: #227447;
+  --manual: #7a5600;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 520px;
+  min-height: 560px;
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 13px/1.45 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.topbar {
+  display: grid;
+  grid-template-columns: 32px 1fr;
+  gap: 10px;
+  align-items: center;
+  padding: 14px 16px;
+  background: var(--panel);
+  border-bottom: 1px solid var(--line);
+}
+
+h1 {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.topbar p {
+  overflow: hidden;
+  margin: 1px 0 0;
+  color: var(--muted);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+main {
+  padding: 14px;
+}
+
+.controls {
+  display: grid;
+  gap: 10px;
+}
+
+label {
+  display: grid;
+  gap: 4px;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+select,
+button {
+  min-height: 34px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  font: inherit;
+}
+
+select {
+  width: 100%;
+  padding: 0 9px;
+  background: var(--panel);
+  color: var(--ink);
+}
+
+button {
+  padding: 0 12px;
+  background: var(--panel);
+  color: var(--ink);
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.button-row {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 8px;
+}
+
+#run {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: #fff;
+  font-weight: 700;
+}
+
+#run:hover {
+  background: var(--accent-strong);
+}
+
+.status {
+  margin: 12px 0;
+  padding: 9px 10px;
+  background: #eef4f0;
+  border: 1px solid #cbded5;
+  border-radius: 6px;
+  color: #264139;
+}
+
+.status p {
+  margin: 0;
+}
+
+.summary {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.summary div {
+  padding: 10px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+}
+
+.summary strong {
+  display: block;
+  font-size: 20px;
+}
+
+.summary span {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.filters {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.filters button {
+  min-height: 30px;
+  padding: 0 6px;
+  font-size: 12px;
+}
+
+.filters button.active {
+  border-color: var(--accent);
+  color: var(--accent-strong);
+  font-weight: 700;
+}
+
+.results {
+  display: grid;
+  gap: 8px;
+  max-height: 310px;
+  overflow: auto;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.result {
+  padding: 10px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-left-width: 5px;
+  border-radius: 6px;
+}
+
+.result.pass {
+  border-left-color: var(--pass);
+}
+
+.result.fail {
+  border-left-color: var(--fail);
+}
+
+.result.manual {
+  border-left-color: var(--manual);
+}
+
+.result.na {
+  border-left-color: var(--muted);
+}
+
+.result.axe {
+  border-left-color: #6048b5;
+}
+
+.result header {
+  display: flex;
+  gap: 8px;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.result h2 {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.3;
+}
+
+.badge {
+  flex: 0 0 auto;
+  padding: 2px 7px;
+  border-radius: 999px;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.badge.pass {
+  background: var(--pass);
+}
+
+.badge.fail {
+  background: var(--fail);
+}
+
+.badge.manual {
+  background: var(--manual);
+}
+
+.badge.na {
+  background: var(--muted);
+}
+
+.badge.axe {
+  background: #6048b5;
+}
+
+.meta,
+.message,
+.solution {
+  margin: 6px 0 0;
+  color: var(--muted);
+}
+
+.evidence {
+  margin: 8px 0 0;
+  padding-left: 18px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.tests {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.tests summary {
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.tests ol {
+  margin: 6px 0 0;
+  padding-left: 18px;
+}
+
+.solution {
+  display: block;
+  padding-top: 6px;
+  border-top: 1px solid var(--line);
+}

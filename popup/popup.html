@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Opquast Desktop</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <img src="../icons/icon32.png" alt="" width="32" height="32">
+      <div>
+        <h1>Opquast Desktop</h1>
+        <p id="current-url">Aucune page analysee</p>
+      </div>
+    </header>
+
+    <main>
+      <section class="controls" aria-label="Parametres d'analyse">
+        <label>
+          Langue
+          <select id="language"></select>
+        </label>
+        <label>
+          Referentiel
+          <select id="checklist"></select>
+        </label>
+        <div class="button-row">
+          <button id="run" type="button">Analyser la page</button>
+          <button id="report" type="button" disabled>Rapport HTML</button>
+          <button id="export" type="button" disabled>Exporter JSON</button>
+        </div>
+      </section>
+
+      <section class="status" aria-live="polite">
+        <p id="message">Choisissez un referentiel puis lancez l'analyse.</p>
+      </section>
+
+      <section class="summary" id="summary" hidden>
+        <div>
+          <strong id="count-pass">0</strong>
+          <span>Conformes</span>
+        </div>
+        <div>
+          <strong id="count-fail">0</strong>
+          <span>A corriger</span>
+        </div>
+        <div>
+          <strong id="count-manual">0</strong>
+          <span>A verifier</span>
+        </div>
+        <div>
+          <strong id="count-na">0</strong>
+          <span>Non applicable</span>
+        </div>
+        <div>
+          <strong id="count-axe">0</strong>
+          <span>Axe issues</span>
+        </div>
+      </section>
+
+      <section class="filters" id="filters" hidden>
+        <button type="button" data-filter="all" class="active">Tout</button>
+        <button type="button" data-filter="fail">Corrections</button>
+        <button type="button" data-filter="manual">Manuel</button>
+        <button type="button" data-filter="na">N/A</button>
+        <button type="button" data-filter="pass">OK</button>
+      </section>
+
+      <ol id="results" class="results"></ol>
+    </main>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

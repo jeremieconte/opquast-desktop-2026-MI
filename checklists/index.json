@@ -1,0 +1,146 @@
+[
+  {
+    "language": "en",
+    "file": "en/567-secondStep.json",
+    "id": 567,
+    "name": "Second step to WCAG 2.0: risks",
+    "rules": 49,
+    "tests": 0,
+    "default": false
+  },
+  {
+    "language": "en",
+    "file": "en/568-firstStep.json",
+    "id": 568,
+    "name": "First step to WCAG 2.0: errors",
+    "rules": 81,
+    "tests": 0,
+    "default": false
+  },
+  {
+    "language": "en",
+    "file": "en/658-opendata.json",
+    "id": 658,
+    "name": "Opendatav2",
+    "rules": 12,
+    "tests": 0,
+    "default": false
+  },
+  {
+    "language": "en",
+    "file": "en/687-opquast.json",
+    "id": 687,
+    "name": "Qualité Web - Opquast V3",
+    "rules": 226,
+    "tests": 0,
+    "default": false
+  },
+  {
+    "language": "en",
+    "file": "en/742-website.json",
+    "id": 742,
+    "name": "Opquast Website V3",
+    "rules": 75,
+    "tests": 0,
+    "default": false
+  },
+  {
+    "language": "fr",
+    "file": "fr/478-seo.json",
+    "id": 478,
+    "name": "SEO",
+    "rules": 80,
+    "tests": 0,
+    "default": false
+  },
+  {
+    "language": "fr",
+    "file": "fr/562-webperfs.json",
+    "id": 562,
+    "name": "Webperf",
+    "rules": 41,
+    "tests": 0,
+    "default": false
+  },
+  {
+    "language": "fr",
+    "file": "fr/567-secondStep.json",
+    "id": 567,
+    "name": "Second pas vers WCAG 2.0 : risques",
+    "rules": 49,
+    "tests": 0,
+    "default": false
+  },
+  {
+    "language": "fr",
+    "file": "fr/568-firstStep.json",
+    "id": 568,
+    "name": "Premier pas vers WCAG 2.0 : erreurs",
+    "rules": 81,
+    "tests": 0,
+    "default": false
+  },
+  {
+    "language": "fr",
+    "file": "fr/597-accessiweb.json",
+    "id": 597,
+    "name": "Accessiweb 2.2 déployée",
+    "rules": 306,
+    "tests": 0,
+    "default": false
+  },
+  {
+    "language": "fr",
+    "file": "fr/599-accessiweb.json",
+    "id": 599,
+    "name": "Accessiweb 2.2 non déployée",
+    "rules": 133,
+    "tests": 0,
+    "default": false
+  },
+  {
+    "language": "fr",
+    "file": "fr/601-sgqri.json",
+    "id": 601,
+    "name": "SGQRI 008-01",
+    "rules": 89,
+    "tests": 0,
+    "default": false
+  },
+  {
+    "language": "fr",
+    "file": "fr/658-opendata.json",
+    "id": 658,
+    "name": "Dataset quality",
+    "rules": 12,
+    "tests": 0,
+    "default": false
+  },
+  {
+    "language": "fr",
+    "file": "fr/687-opquast.json",
+    "id": 687,
+    "name": "Qualité Web - Opquast V3",
+    "rules": 226,
+    "tests": 0,
+    "default": false
+  },
+  {
+    "language": "fr",
+    "file": "fr/716-rgaa-4.1.2.json",
+    "id": 412,
+    "name": "RGAA 4.1.2",
+    "rules": 106,
+    "tests": 258,
+    "default": true
+  },
+  {
+    "language": "fr",
+    "file": "fr/742-website.json",
+    "id": 742,
+    "name": "Opquast Website V3",
+    "rules": 75,
+    "tests": 0,
+    "default": false
+  }
+]
