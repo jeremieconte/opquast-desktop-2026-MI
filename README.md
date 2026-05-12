@@ -1,41 +1,50 @@
-# Opquast Desktop 2026 Firefox Extension
+# Opquast Desktop 2026 - Extension Firefox RGAA 4.1.2
 
-This WebExtension was generated from the archived Opquast Desktop sources.
+Ce dossier est le paquet complet de diffusion de l'extension Firefox signee par
+Mozilla AMO en mode non liste.
 
-It embeds the Opquast checklist JSON files, RGAA 4.1.2 criteria/tests from the
-official DINUM repository, and axe-core 4.11.4 for automated DOM accessibility
-checks on the final rendered page.
+## Installation rapide
 
-## Development install
+1. Ouvrir Firefox.
+2. Ouvrir `extension/opquast-rgaa-4.1.2-firefox-signed.xpi`.
+3. Confirmer l'installation.
+4. Ouvrir une page a auditer.
+5. Cliquer sur l'icone Opquast Desktop, puis sur `Analyser la page`.
 
-1. Open `about:debugging#/runtime/this-firefox` in Firefox.
-2. Click `Load Temporary Add-on`.
-3. Select `manifest.json` in this directory, or select the generated `.xpi`.
+## Contenu du dossier
 
-The generated XPI is unsigned. Permanent installation in standard Firefox requires signing through Mozilla Add-ons.
+- `extension/` : XPI signe, XPI non signe de test et copie originale AMO.
+- `source/` : sources WebExtension correspondant a l'extension.
+- `docs/` : documentation d'installation, d'utilisation, de distribution et de
+  maintenance.
+- `licenses/` : licences et notices tierces.
+- `checksums/` : empreintes SHA-256 des fichiers diffuses.
 
-## Report
+## Fichiers principaux
 
-Use `Analyser la page`, then `Rapport HTML`.
+- `extension/opquast-rgaa-4.1.2-firefox-signed.xpi` : fichier a partager.
+- `source/opquast-rgaa-4.1.2-firefox-source.zip` : sources archivees.
+- `docs/01-installation.md` : installation utilisateur.
+- `docs/04-confidentialite-permissions.md` : permissions et donnees.
+- `docs/07-distribution-et-signature-amo.md` : signature et diffusion.
+- `docs/06-validation-technique.md` : controles effectues.
 
-The report separates:
+## Statut
 
-- automated axe-core and DOM findings;
-- official RGAA 4.1.2 criteria and test methodologies;
-- Opquast rules that can be checked from the rendered page;
-- rules that are not applicable because the inspected DOM has no matching target;
-- rules that still require human judgement.
+- Version extension : `2.0.4.2026`
+- Referentiel par defaut : `RGAA 4.1.2`
+- Signature : Mozilla AMO `unlisted`
 
-OCR is intentionally not enabled by default. It can help detect text embedded in
-images, but it adds a large WebAssembly OCR payload and is slower than DOM and
-axe-core checks.
+- Collecte/transmission de donnees : aucune declaree dans le manifeste
 
-## Build
+## Limite
 
-From the project root:
+Ce paquet fournit une aide a l'audit et automatise ce qui peut l'etre depuis la
+page rendue dans Firefox. Il ne remplace pas un audit RGAA humain complet,
+notamment pour les criteres qui dependent du sens, de l'intention editoriale, de
+la pertinence des alternatives ou de parcours utilisateur complexes.
 
-```bash
-zip -r ../dist/opquast-desktop-2026-firefox.xpi .
-```
 
-Run that command inside `firefox-extension/`.
+## Remerciements
+
+Merci à Mickaël Hoareau et plus largement à l'équipe TEMESIS qui oeuvrent depuis longtemps à rendre les sites web plus accessibles et inclusifs
